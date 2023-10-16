@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors Game</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="public/17911-1.png" type="image/x-icon">
+</head>
+<body>
+    <header class="game-header">
+        <h1 class="game-title">Rock Paper Scissors</h1>
+        <div class="scoreboard">
+            <div class="scoreBox">
+                <p>Your <br>Score</p>
+                <span id="userScore"></span>
+            </div>
+            <div class="scoreBox">
+                <p>Computer <br>Score</p>
+                <span id="computerScore"></span>
+            </div>
+        </div>
+        <button id="reset-button" onclick="resetGame()">&#8634;</button>
+    </header>
+
+    <main class="game-main">
+        <div class="user-choices" id="choice-user">
+            <button class="choice-button rock" onclick="makeChoice('rock')">Rock
+                <img src="./public/icons8-fist-67-1.png" alt="" />
+            </button>
+            <button class="choice-button paper" onclick="makeChoice('paper')">Paper
+                <img src="./public/icons8-hand-64-1.png" alt="" />
+            </button>
+            <button class="choice-button scissors" onclick="makeChoice('scissors')">Scissors
+                <img src="./public/17911-1.png" alt="" />
+            </button>
+        </div>
+        <div class="game-results" id="gameResults">
+            <div class="result-container">
+                <div class="user-choice" id="user-choice">
+                    <img src="./public/icons8-fist-67-1.png" alt="Your Choice" id="userChoiceImage" />
+                </div>
+                <div class="result-details" id="resultDetails">
+                    <h1 id="resultTitle">You Win</h1>
+                    <h2 id="resultSubtitle">Against the Computer</h2>
+                    <button onclick="playAgain()">Play Again</button>
+                </div>
+                <div class="computer-choice" id="computer-choice">
+                    <img src="./public/17911-1.png" alt="Computer's Choice" id="computerChoiceImage" />
+                </div>
+            </div>
+        </div>
+        
+        <div class="game-rules-section">
+            <div class="button ripple" id="showRulesButton" onclick="closeRules()">
+                Rules
+            </div>
+            <a href="./hurray.html" class="button ripple" id="nextPageButton">Next</a>
+        </div>
+        <div id="gameRules">
+            <h1>Game Rules</h1>
+            <ul>
+                <li>Rock beats scissors, scissors beat paper, and paper beats rock.</li>
+                <li>
+                    Decide whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper, scissors” before playing.
+                </li>
+                <li>
+                    Use rock, paper, scissors to make decisions or simply for fun.
+                </li>
+                <li>
+                    If both players choose the same hand, each player lays down another hand.
+                </li>
+            </ul>
+            <div id="closeRulesButton" onclick="closeRules()">X</div>
+        </div>
+        
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
